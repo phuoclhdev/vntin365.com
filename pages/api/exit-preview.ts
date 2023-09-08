@@ -1,5 +1,7 @@
 import { NextApiResponse } from 'next'
 
+export const runtime = 'experimental-edge'
+
 export default async function exit(_, res: NextApiResponse) {
   // Exit Draft Mode by removing the cookie
   res.setDraftMode({ enable: false })
